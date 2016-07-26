@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <template id="index" name="select_cashier_module_index index"
+                  inherit_id="point_of_sale.index">
+            <xpath expr="//link[@id='pos-stylesheet']" position="after">
+                <link rel="stylesheet" href="/pos_select_cashier/static/src/css/pos.css"/>
+            </xpath>
+
+        </template>
+
+      	<template id="assets_backend" name="select_cashier_module assets"
+                  inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+            	<script type="text/javascript" src="/pos_select_cashier/static/src/js/db.js"></script>
+                <script type="text/javascript" src="/pos_select_cashier/static/src/js/models.js"></script>
+                <script type="text/javascript" src="/pos_select_cashier/static/src/js/screens.js"></script>
+                <script type="text/javascript" src="/pos_select_cashier/static/src/js/widgets.js"></script>
+            	<script type="text/javascript" src="/pos_select_cashier/static/src/js/main.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+
+	<t t-name="CashierSelectionScreenWidget">
+		<div class="pos-select-cashier">
+			<div class="select-wrapper">
+				<div class="select-title">
+					Select cashier
+				</div>
+				<div class="select-wrapper-item">
+					<t t-call="CashierSelectionItem" />
+				</div>
+			</div>
+		</div>
+	</t>
+
+	<t t-name="CashierSelectionItem">
+		<t t-foreach="widget.options" t-as="cashier">
+			<div class="cashier-item" t-att-data-cashier-id="cashier.id">
+				<div class="cashier-item-image">
+					<img t-att-src="'data:image/png;base64,' + cashier.image_small" />
+				</div>
+				<div class="cashier-item-info">
+					<div class="cashier-name">
+						<span t-esc="cashier.name" />
+					</div>
+					<div class="select-cashier" t-att-data-cashier-id="cashier.id">Access</div>
+				</div>
+			</div>
+		</t>
+	</t>
+
+	<t t-extend="UsernameWidget">
+		<t t-jquery=".username" t-operation="replace">
+			<div class="cashier-display">
+				<img class="cashier-avatar" t-att-src="'data:image/png;base64,' + widget.get_image()" />
+				<span class="username">
+					<t t-esc="widget.get_name()" />
+				</span>
+			</div>
+		</t>
+	</t>
+	
+	<t t-extend="PosWidget">
+    	<t t-jquery=".placeholder-UsernameWidget" t-operation="replace" />
+        <t t-jquery=".pos-branding" t-operation="append">
+        	<span class="placeholder-UsernameWidget"></span>
+        </t>
+    </t>
+	
+</template>

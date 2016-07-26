@@ -32,6 +32,8 @@
         'point_of_sale',
     ],
     'data': [
+        'views/pos_config_views.xml',
+        'templates/templates.xml',
     ],
     'qweb': ['static/src/xml/*.xml'],
     'installable': True,

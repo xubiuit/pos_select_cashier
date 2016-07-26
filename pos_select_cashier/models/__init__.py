@@ -21,5 +21,4 @@
 #
 ##############################################################################
 
-import controllers
-import models
+import pos_config
