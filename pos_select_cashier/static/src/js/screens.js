@@ -18,9 +18,9 @@ function openerp_pos_select_cashier_screens(instance, module){ //module = opener
         	this._super();
         	var self = this;
         	
-        	this.$('.select-cashier').on('click', function(e) {
+        	this.$('.cashier-item').on('click', function(e) {
         		// TODO: check is required password to show a password for user
-        		var cashier_id = $(e.target).data('cashier-id');
+        		var cashier_id = $(this).data('cashier-id');
         		cashier_id = parseInt(cashier_id);
         		self.pos.cashier = self.pos.db.get_cashier(cashier_id);
         		self.pos_widget.username = new module.UsernameWidget(self.parent, self.pos.cashier);
@@ -35,5 +35,9 @@ function openerp_pos_select_cashier_screens(instance, module){ //module = opener
         back: function() {
             this.pos_widget.screen_selector.set_current_screen(this.back_screen);
         },
+        
+        color_random_generator: function() {
+        	return "#" + Math.random().toString(16).slice(2, 8).toUpperCase();
+        }
 	});
 }

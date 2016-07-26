@@ -16,7 +16,7 @@
 
 	<t t-name="CashierSelectionItem">
 		<t t-foreach="widget.options" t-as="cashier">
-			<div class="cashier-item" t-att-data-cashier-id="cashier.id">
+			<div class="cashier-item" t-att-data-cashier-id="cashier.id" t-att-style="'background: ' + widget.color_random_generator()">
 				<div class="cashier-item-image">
 					<img t-att-src="'data:image/png;base64,' + cashier.image_small" />
 				</div>
@@ -24,7 +24,6 @@
 					<div class="cashier-name">
 						<span t-esc="cashier.name" />
 					</div>
-					<div class="select-cashier" t-att-data-cashier-id="cashier.id">Access</div>
 				</div>
 			</div>
 		</t>
