@@ -8,5 +8,5 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[menu_popup](menu_popup/) | 8.0.1.0 | POS Select Cashier
+[pos_select_cashier](pos_select_cashier/) | 8.0.1.0 | POS Select Cashier
 
