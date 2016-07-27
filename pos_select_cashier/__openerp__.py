@@ -33,6 +33,7 @@
     ],
     'data': [
         'views/pos_config_views.xml',
+        'views/res_users_views.xml',
         'templates/templates.xml',
     ],
     'qweb': ['static/src/xml/*.xml'],

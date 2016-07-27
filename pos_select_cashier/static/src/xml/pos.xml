@@ -46,5 +46,50 @@
         	<span class="placeholder-UsernameWidget"></span>
         </t>
     </t>
+    
+    <t t-name="PasswordConfirmPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-password-confirm">
+                <div class="message"><t t-esc=" widget.message || 'Pin Code' " /></div>
+                <div class="content">
+                	<input id="password_content" type="password" />
+                	<div class="numpad">
+                		<table class="table-numpad" border="1">
+                		<tbody>
+                			<tr>
+                				<td class="number-char">1</td>
+                				<td class="number-char">2</td>
+                				<td class="number-char">3</td>
+                			</tr>
+                			<tr>
+                				<td class="number-char">4</td>
+                				<td class="number-char">5</td>
+                				<td class="number-char">6</td>
+                			</tr>
+                			<tr>
+                				<td class="number-char">7</td>
+                				<td class="number-char">8</td>
+                				<td class="number-char">9</td>
+                			</tr>
+                			<tr>
+                				<td class="number-clear">AC</td>
+                				<td class="number-char">0</td>
+                				<td class="numpad-backspace"><img height="21" src="/point_of_sale/static/src/img/backspace.png" width="24" /></td>
+                			</tr>
+                		</tbody>
+                	</table>
+                	</div>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm 
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
 	
 </template>

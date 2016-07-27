@@ -21,10 +21,6 @@ Installation process is at present stage only possible in manual way.
 Then go to you odoo webinterface to the module section and start "Update module list". Then look for the "POS Select Cashier" in Apps (module list) and install.
 I hope you enjoy checking out what all you can do with this application.
 
-Developing
-==========
-TODO: Require password when change cashier. I will update later.
-
 
 Prerequisite
 ============
@@ -40,7 +36,7 @@ Thank you.
 
 |
 With this module, you just need open POS session by only *one user* but you **can use by other users**
-|
+
 
 Configuration
 =============
@@ -99,6 +95,40 @@ Working on all of devices
 |
 .. figure:: device_2.jpg
    :alt: iPad working
+   :scale: 80 %
+   :align: center
+   :figclass: text-center
+|
+
+
+Require password when change cashier
+------------------------------------
+
+**Config required password** when change cashier
+
+|
+.. figure:: config_required_pass.jpg
+   :alt: Config required password
+   :scale: 80 %
+   :align: center
+   :figclass: text-center
+|
+
+**Set password** for cashier
+
+|
+.. figure:: set_password.jpg
+   :alt: Set password
+   :scale: 80 %
+   :align: center
+   :figclass: text-center
+|
+
+**Required password screen** display whenever click on cashier name
+
+|
+.. figure:: required_sceen.jpg
+   :alt: Required password screen
    :scale: 80 %
    :align: center
    :figclass: text-center

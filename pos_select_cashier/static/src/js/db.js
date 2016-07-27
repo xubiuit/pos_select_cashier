@@ -20,7 +20,8 @@ function openerp_pos_select_cashier_db(instance, module){ //module = openerp.poi
         		self.cashier_by_id[user.id] = {
         			image: user.image_small,
         			name: user.name,
-        			id: user.id
+        			id: user.id,
+        			cashier_password: user.cashier_password || '',
         		}
         	});
         },
@@ -38,6 +39,16 @@ function openerp_pos_select_cashier_db(instance, module){ //module = openerp.poi
         
         get_required_password: function(config) {
         	return this.required_password;
+        },
+        
+        get_cashier_password: function(cashier_id) {
+        	var cashier = this.get_cashier(cashier_id);
+        	
+        	if (_.isEmpty(cashier)) {
+        		return false;
+        	} else {
+        		return cashier.cashier_password;
+        	}
         }
     });
 }

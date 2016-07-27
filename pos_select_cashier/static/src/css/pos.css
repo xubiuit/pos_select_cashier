@@ -135,3 +135,76 @@
     height: 48px;
     float: left;
 }
+
+/*
+	Show password
+*/
+.popup-password-confirm {
+	width: 270px !important;
+	height: 490px !important;
+	padding: 0px !important;
+	margin-top: 0px !important;
+	top: 20px !important;
+	left: 55% !important;
+	border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.popup-password-confirm .message {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-transform: uppercase;
+    background: #1abc9c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-password-confirm .content {
+	padding: 10px;
+}
+
+.popup-password-confirm .numpad {
+    padding: 8px;
+}
+
+.popup-password-confirm table.table-numpad {
+    border-color: #ccc;
+}
+
+.popup-password-confirm table.table-numpad td {
+    padding: 16px;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.popup-password-confirm table.table-numpad td:hover {
+    background: #1abc9c;
+    color: #FFF;
+}
+
+.popup-password-confirm #password_content {
+    width: 190px;
+    height: 40px;
+    border: 2px solid #DDD;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 0 15px;
+    outline: none;
+}
+
+.popup-password-confirm #password_content:focus {
+	border: 2px solid #1abc9c;
+}
+
+.popup-password-confirm .button {
+	margin-right: 11px !important;
+    width: 115px !important;
+    font-size: 16px !important;
+}

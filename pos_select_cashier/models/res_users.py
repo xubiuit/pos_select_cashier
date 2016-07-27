@@ -21,5 +21,10 @@
 #
 ##############################################################################
 
-import pos_config
-import res_users
+from openerp import models, fields, api
+
+
+class res_users(models.Model):
+    _inherit = 'res.users'
+    
+    cashier_password = fields.Char(string="Cashier Password", default="000000")
